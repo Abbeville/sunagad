@@ -3,9 +3,6 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-var_dump('Reached here');
-exit();
-
 define('LARAVEL_START', microtime(true));
 
 /*
