@@ -18,8 +18,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'fname',
+        'lname',
         'email',
+        'username',
+        'phone_number',
         'password',
     ];
 
@@ -41,4 +44,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function fullname(){
+        return $this->fname.' '.$this->lname;
+    }
 }

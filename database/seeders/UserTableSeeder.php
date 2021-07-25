@@ -31,7 +31,7 @@ class UserTableSeeder extends Seeder
             'lname' => $faker->lastName,
             'username' => 'admin',
             'phone_number' => $faker->phoneNumber,
-            'email' => 'admin@akesanmarketapp.com',
+            'email' => 'admin@sunagad.com',
             'email_verified_at' => now(),
             'password' => \Illuminate\Support\Facades\Hash::make('adminpass'), // password
         ]);

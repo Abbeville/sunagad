@@ -19,6 +19,10 @@ Route::get('/', function () {
 */
 Auth::routes();
 
+// Route::get('/admin', [App\Http\Controllers\RedirectController::class, 'login'])->name('admin');
+
+Route::get('/redirect', [App\Http\Controllers\RedirectController::class, 'index'])->name('redirect');
+
 Route::get('session', function(){
     dd($_SESSION['default']);
 });
@@ -37,3 +41,5 @@ Route::get('/order/{hash}', ['App\Http\Controllers\OrderController', 'show'])->n
 Route::post('/order/create', ['App\Http\Controllers\OrderController', 'create'])->name('order.create');
 
 Route::get('/braintree/token', ['App\Http\Controllers\BraintreeController', 'token'])->name('braintree.token');
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth'], 'namespace' => 'Admin'], base_path('routes/admin_routes.php'));
