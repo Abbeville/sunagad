@@ -36,7 +36,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="text-3xl font-bold leading-8 mt-6">4.510</div>
+                      <div class="text-3xl font-bold leading-8 mt-6">{{ $total_sales }}</div>
                       <div class="text-base text-gray-600 mt-1">Item Sales</div>
                     </div>
                   </div>
@@ -59,7 +59,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="text-3xl font-bold leading-8 mt-6">3.521</div>
+                      <div class="text-3xl font-bold leading-8 mt-6">{{ $thisMonth }}</div>
                       <div class="text-base text-gray-600 mt-1">New Orders</div>
                     </div>
                   </div>
@@ -82,7 +82,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="text-3xl font-bold leading-8 mt-6">2.145</div>
+                      <div class="text-3xl font-bold leading-8 mt-6">{{ $products->count() }}</div>
                       <div class="text-base text-gray-600 mt-1">
                         Total Products
                       </div>
@@ -108,7 +108,7 @@
                         </div>
                       </div>
                       <div class="text-3xl font-bold leading-8 mt-6">
-                        152.000
+                        {{ $customers->count() }}
                       </div>
                       <div class="text-base text-gray-600 mt-1">
                         Unique Visitor
@@ -143,7 +143,7 @@
                       <div
                         class="text-theme-20 dark:text-gray-300 text-lg xl:text-xl font-bold"
                       >
-                        $15,000
+                        @mon($thisMonth)
                       </div>
                       <div class="mt-0.5 text-gray-600 dark:text-gray-600">
                         This Month
@@ -156,7 +156,7 @@
                       <div
                         class="text-gray-600 dark:text-gray-600 text-lg xl:text-xl font-medium"
                       >
-                        $10,000
+                        @mon(0)
                       </div>
                       <div class="mt-0.5 text-gray-600 dark:text-gray-600">
                         Last Month
